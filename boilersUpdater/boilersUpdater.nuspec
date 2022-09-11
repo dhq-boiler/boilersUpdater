@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Homura</id>
+    <id>boilersUpdater</id>
     <authors>dhq_boiler</authors>
     <owners>dhq_boiler</owners>
 	<projectUrl>https://github.com/dhq-boiler/boilersUpdater</projectUrl>
