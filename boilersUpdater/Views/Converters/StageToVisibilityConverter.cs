@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 
-namespace update.Views.Converters
+namespace boilersUpdater.Views.Converters
 {
     public class StageToVisibilityConverter : IValueConverter
     {

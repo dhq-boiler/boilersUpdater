@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace update.Models
+namespace boilersUpdater.Models
 {
     public class Asset
     {
@@ -15,7 +15,7 @@ namespace update.Models
         public long size { get; set; }
         public long download_count { get; set; }
         public DateTime created_at { get; set; }
-        public DateTime updated_at { get; set; }
+        public DateTime boilersUpdaterd_at { get; set; }
         public Uri browser_download_url { get; set; }
     }
 }

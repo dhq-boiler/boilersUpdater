@@ -2,10 +2,10 @@
 using NLog;
 using System;
 using System.Data;
-using update.Data.Dao;
-using update.Models;
+using boilersUpdater.Data.Dao;
+using boilersUpdater.Models;
 
-namespace update.Domain.Data.Dao
+namespace boilersUpdater.Domain.Data.Dao
 {
     public class VersionControlDao : SQLiteBaseDao<VersionControl>
     {
