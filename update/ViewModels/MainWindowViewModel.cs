@@ -204,12 +204,14 @@ namespace update.ViewModels
                         if (isDirectory)
                         {
                             txFileManager.CreateDirectory(entry.FullName);
+                            History.Add($"ディレクトリ作成：{entry.FullName}");
                         }
                         else
                         {
                             var filename = Path.Combine(Directory.GetCurrentDirectory(), entry.FullName);
                             txFileManager.Snapshot(filename);
                             entry.ExtractToFile(filename, true);
+                            History.Add($"ファイルコピー：{filename}");
                         }
 
                         ProgressPercentage.Value = ++currentCount / totalCount * 100;
