@@ -10,9 +10,9 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using update.Views;
+using boilersUpdater.Views;
 
-namespace update
+namespace boilersUpdater
 {
     /// <summary>
     /// Interaction logic for App.xaml

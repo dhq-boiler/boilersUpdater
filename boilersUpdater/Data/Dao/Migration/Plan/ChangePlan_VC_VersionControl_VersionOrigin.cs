@@ -1,10 +1,10 @@
 ﻿using Homura.ORM;
 using Homura.ORM.Mapping;
 using Homura.ORM.Migration;
-using update.Domain.Data.Dao;
-using update.Models;
+using boilersUpdater.Domain.Data.Dao;
+using boilersUpdater.Models;
 
-namespace update.Data.Dao.Migration.Plan
+namespace boilersUpdater.Data.Dao.Migration.Plan
 {
     internal class ChangePlan_VC_VersionControl_VersionOrigin : ChangePlanByTable<VersionControl, VersionOrigin>
     {

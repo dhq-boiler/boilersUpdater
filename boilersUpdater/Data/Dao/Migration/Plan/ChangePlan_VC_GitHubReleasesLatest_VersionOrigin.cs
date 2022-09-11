@@ -3,7 +3,7 @@ using Homura.ORM.Mapping;
 using Homura.ORM.Migration;
 using Sunctum.Domain.Models;
 
-namespace update.Data.Dao.Migration.Plan
+namespace boilersUpdater.Data.Dao.Migration.Plan
 {
     internal class ChangePlan_VC_GitHubReleasesLatest_VersionOrigin : ChangePlanByTable<GitHubReleasesLatest, VersionOrigin>
     {

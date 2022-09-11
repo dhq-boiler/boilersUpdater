@@ -2,7 +2,7 @@
 using Homura.ORM.Mapping;
 using System;
 
-namespace update.Models
+namespace boilersUpdater.Models
 {
     public class VersionControl : EntityBaseObject
     {

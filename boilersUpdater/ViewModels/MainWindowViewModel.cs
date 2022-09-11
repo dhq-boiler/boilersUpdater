@@ -25,12 +25,12 @@ using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows;
 using System.Windows.Forms;
-using update.Data.Dao;
-using update.Data.Dao.Migration.Plan;
-using update.Domain.Data.Dao;
-using update.Models;
+using boilersUpdater.Data.Dao;
+using boilersUpdater.Data.Dao.Migration.Plan;
+using boilersUpdater.Domain.Data.Dao;
+using boilersUpdater.Models;
 
-namespace update.ViewModels
+namespace boilersUpdater.ViewModels
 {
     public enum EStage
     {
@@ -66,7 +66,7 @@ namespace update.ViewModels
         public ReactivePropertySlim<long> TotalBytesToReceive { get; set; } = new ReactivePropertySlim<long>(0);
         public ReactiveCollection<string> History { get; set; } = new ReactiveCollection<string>();
 
-        public ReactiveCommand StartUpdate { get; }
+        public ReactiveCommand StartboilersUpdater { get; }
         public ReactiveCommand Cancel { get; }
         private Latest Latest { get; set; }
         private Uri browser_download_url { get; set; }
@@ -98,8 +98,8 @@ namespace update.ViewModels
 
             Stage.Value = EStage.Stage1;
 
-            StartUpdate = new ReactiveCommand();
-            StartUpdate.Subscribe(() =>
+            StartboilersUpdater = new ReactiveCommand();
+            StartboilersUpdater.Subscribe(() =>
             {
                 browser_download_url = Latest.assets.Where(x => x.name.EndsWith(".zip"))
                                                     .Select(x => x.browser_download_url)
@@ -176,8 +176,8 @@ namespace update.ViewModels
             yield return Path.Combine(curdir, "System.Reactive.dll");
             yield return Path.Combine(curdir, "Unity.Abstractions.dll");
             yield return Path.Combine(curdir, "Unity.Container.dll");
-            yield return Path.Combine(curdir, "update.dll");
-            yield return Path.Combine(curdir, "update.pdb");
+            yield return Path.Combine(curdir, "boilersUpdater.dll");
+            yield return Path.Combine(curdir, "boilersUpdater.pdb");
             yield return Path.Combine(curdir, "runtimes\\win\\lib\\net6.0\\System.Data.OleDb.dll");
         }
 
@@ -226,6 +226,7 @@ namespace update.ViewModels
             }
             finally
             {
+                zipFile.Dispose();
                 //後処理
                 if (File.Exists(downloadFileName))
                 {

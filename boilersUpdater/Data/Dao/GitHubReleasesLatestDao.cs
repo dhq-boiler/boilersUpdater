@@ -3,7 +3,7 @@ using Sunctum.Domain.Models;
 using System;
 using System.Data;
 
-namespace update.Data.Dao
+namespace boilersUpdater.Data.Dao
 {
     public class GitHubReleasesLatestDao : SQLiteBaseDao<GitHubReleasesLatest>
     {

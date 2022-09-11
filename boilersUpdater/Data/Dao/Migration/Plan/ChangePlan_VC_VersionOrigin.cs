@@ -4,7 +4,7 @@ using Homura.ORM.Mapping;
 using Homura.ORM.Migration;
 using System.Collections.Generic;
 
-namespace update.Data.Dao.Migration.Plan
+namespace boilersUpdater.Data.Dao.Migration.Plan
 {
     public class ChangePlan_VC_VersionOrigin : ChangePlanByVersion<VersionOrigin>
     {
